@@ -1,0 +1,16 @@
+[package]
+name = "better_ffi_macros"
+version = "0.1.0"
+edition = "2021"
+license = "Unlicense OR MIT"
+authors = ["Heráclito <heraclitoqsaldanha@gmail.com>"]
+description = "a library to make FFI Rust <-> Rust easier to work with"
+repository = "https://github.com/Heraclito-Q-Saldanha/better_ffi"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = {version = "2.0.15", features = ["full"] }
+quote = "1.0.26"
+proc-macro2 = "1.0.56"

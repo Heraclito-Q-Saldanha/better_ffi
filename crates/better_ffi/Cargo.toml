@@ -1,0 +1,15 @@
+[package]
+name = "better_ffi"
+version = "0.1.0"
+edition = "2021"
+license = "Unlicense OR MIT"
+authors = ["Heráclito <heraclitoqsaldanha@gmail.com>"]
+description = "a library to make FFI Rust <-> Rust easier to work with"
+repository = "https://github.com/Heraclito-Q-Saldanha/better_ffi"
+
+[dependencies]
+better_ffi_macros = {path = "../better_ffi_macros"}
+libloading = {version = "0.8", optional = true}
+
+[features]
+libloading = ["dep:libloading"]
