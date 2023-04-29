@@ -26,6 +26,9 @@ mod lib {
 		pub unsafe fn get<T: SafeFFi>(&self, symbol: &[u8]) -> Result<Symbol<T>, Error> {
 			self.lib.get(symbol)
 		}
+		pub unsafe fn get_unchecked<T>(&self, symbol: &[u8]) -> Result<Symbol<T>, Error> {
+			self.lib.get(symbol)
+		}
 	}
 }
 
