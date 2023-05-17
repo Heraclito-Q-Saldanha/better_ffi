@@ -1,7 +1,7 @@
 use crate::*;
 use std::{fmt, ops};
 
-#[repr(C)]
+#[repr(transparent)]
 #[derive(PartialEq, Eq)]
 pub struct FFIString {
 	vec: FFIVec<u8>,

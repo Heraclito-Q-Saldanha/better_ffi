@@ -18,14 +18,17 @@ mod lib {
 		lib: libloading::Library,
 	}
 	impl Library {
+		#[inline]
 		pub unsafe fn load(path: &str) -> Result<Self, Error> {
 			Ok(Self {
 				lib: libloading::Library::new(path)?,
 			})
 		}
+		#[inline]
 		pub unsafe fn get<T: SafeFFi>(&self, symbol: &[u8]) -> Result<Symbol<T>, Error> {
 			self.lib.get(symbol)
 		}
+		#[inline]
 		pub unsafe fn get_unchecked<T>(&self, symbol: &[u8]) -> Result<Symbol<T>, Error> {
 			self.lib.get(symbol)
 		}
